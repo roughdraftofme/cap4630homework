@@ -266,7 +266,7 @@ def main():
 
 # Setting Parameters ##################################################################
 model_path = '/content/HW3/trained_models/RuTanks7000_v1_l2.h5'
-test_path = '/content/HW3/datasets/RuTanks7000/test/'  #  105 Test images
+test_path = '/content/HW3/datasets/RuTanks7000/test'  #  105 Test images
 
 # image settings
 img_height, img_width = 331, 331
@@ -422,12 +422,10 @@ def plot_images():
                         "\n%.2f" % predictions[2][0] + "% " + predictions[2][1] + \
                         "\n%.2f" % predictions[3][0] + "% " + predictions[3][1] + \
                         "\n%.2f" % predictions[4][0] + "% " + predictions[4][1] + \
-                        "\n%.2f" % predictions[5][0] + "% " + predictions[5][1] + \
-                        "\n%.2f" % predictions[6][0] + "% " + predictions[6][1]
+                        "\n%.2f" % predictions[5][0] + "% " + predictions[5][1]
         plt.text(img_width + 10, 125, legend_string, fontsize=16)
         plt.imshow(test_images[k])
         plt.show()
 
 
 main()
-
